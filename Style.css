@@ -103,7 +103,7 @@ article h2 {
     padding: 0;
     gap: .3rem;
     position: fixed;
-    bottom: 50px;
+    bottom: 40px;
     right: 20px;
     background-color: #e8e9eb;
     border-radius: 10px;
@@ -111,11 +111,15 @@ article h2 {
 
 .redes-sociales li {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     border: 2px solid black;
     border-radius: 8px;
+}
+
+.redes-sociales li a{
+    margin-inline: 10px;
 }
 
 .redes-sociales img {
