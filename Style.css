@@ -1,12 +1,49 @@
+:root {
+
+    --bg-color: #e8e9eb;
+    
+    --color: black;
+    --primary-color: red;
+    --sencond-color: whitesmoke;
+    
+    --h1-color: darkred;
+    --h2-color: #3a0000;
+    
+    --size-1:2rem;
+    --size-2:1.5rem;
+    --size-3:1.25rem;
+    --size-4:1.10rem;
+    --size-5:.75rem;
+    --size-6:.5rem;
+
+}
+
 * {
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
 }
 
-a { color: black; }
+h1 { 
+    font-size: var(--size-1);
+    color: var(--h1-color);
+    margin: 5px;
+}
+
+h2 {     
+    font-size: var(--size-2);
+    color: var(--h2-color);
+    margin: 5px;
+}
+
+h3 { font-size: var(--size-3); }
+
+h4 { font-size: var(--size-4); }
+
+a { color: var(--color); }
 
 a:hover {
     text-decoration: underline;
@@ -14,7 +51,7 @@ a:hover {
 }
 
 body, html {
-    background-color: #e8e9eb;
+    background-color: var(--bg-color);
     height: 100%;
     margin: 0;
 }
@@ -31,12 +68,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 5px 5px;
-    color: whitesmoke;
-    background-color: red;
+    color: var(--sencond-color);
+    background-color: var(--primary-color);
 }
 
 header .logo p {
-    font-size: 1rem;
+    font-size: var(--size-5);
     font-weight: bold;
     font-style: italic;
 }
@@ -64,23 +101,13 @@ article {
 }
 
 article p {
-    font-size: 1rem;
+    font-size: var(--size-5);
     color: black;
     margin: 5px;
     font-weight: bold;
 }
 
-article h1 {
-    font-size: 2rem;
-    color: darkred;
-    margin: 5px;
-}
 
-article h2 {
-    font-size: 1.5rem;
-    color: #3a0000;
-    margin: 5px;
-}
 
 .foto {
     max-width: 200px;
@@ -105,7 +132,7 @@ article h2 {
     position: fixed;
     bottom: 40px;
     right: 20px;
-    background-color: #e8e9eb;
+    background-color: var(--bg-color);
     border-radius: 10px;
 }
 
@@ -141,20 +168,26 @@ article h2 {
 }
 
 .trabajos ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;  
-    gap: .4rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  
 }
 
 .trabajos ul li {
-    min-width: 10%;
+    min-width: 200px;
     flex-grow: 1;
     padding: 20px;
     border: 2px solid black;
     border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
     flex: auto;
     font-weight: bold;
+}
+
+.trabajos ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 2);
 }
 
 /* Conocimientos */
@@ -186,12 +219,12 @@ article h2 {
 
 .footer {
     margin-top: auto;
-    background-color: red;
+    background-color: var(--primary-color);
     padding: 20px;
 }
 
 .footer p {
-    color: whitesmoke;
+    color: var(--sencond-color);
     text-align: center;
-    font-size: .8rem;
+    font-size: var(--size-5);
 }
